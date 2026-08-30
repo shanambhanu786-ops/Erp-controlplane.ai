@@ -1,0 +1,10 @@
+ai-erp-security/
+├── .gitignore
+├── README.md
+├── docs/
+│   ├── architecture.md
+│   ├── presentation_deck.md
+│   └── dynamic_pdf_export.html
+└── src/
+    ├── main.py
+    └── docker-compose.yml
