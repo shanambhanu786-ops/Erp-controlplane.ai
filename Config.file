@@ -1,0 +1,20 @@
+from pydantic_settings import BaseSettings
+
+class Settings(BaseSettings):
+    PROJECT_NAME: str = "AI-Based ERP Security Platform"
+    REDIS_HOST: str = "redis-state-store"
+    REDIS_PORT: int = 6379
+    RISK_THRESHOLD_MED: float = 40.0
+    RISK_THRESHOLD_HIGH: float = 75.0
+    MAX_SESSION_HISTORY: int = 50
+    
+    # Weight factors for Cross-Domain Risk Score
+    WEIGHT_SECURITY: float = 0.35
+    WEIGHT_ERP: float = 0.35
+    WEIGHT_CLOUD: float = 0.15
+    WEIGHT_FINOPS: float = 0.15
+
+    class Config:
+        env_file = ".env"
+
+settings = Settings()
