@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI-Based ERP Security Specification</title>
+<style>
+  @page {
+    size: A4;
+    margin: 20mm 15mm 20mm 15mm;
+    @bottom-right {
+      content: "Page " counter(page) " of " counter(pages);
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 8pt;
+      color: #666;
+    }
+  }
+
+  body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.5;
+    font-size: 10pt;
+    background-color: #ffffff;
+  }
+
+  h1 {
+    font-size: 20pt;
+    color: #0f172a;
+    border-bottom: 2px solid #2563eb;
+    padding-bottom: 8px;
+    margin-top: 0;
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    font-size: 14pt;
+    color: #1e293b;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 4px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 11pt;
+    color: #2563eb;
+    margin-top: 14px;
+    margin-bottom: 6px;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  ul, ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+  }
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  code {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #f1f5f9;
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 9pt;
+  }
+
+  pre {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 12px;
+    border-radius: 6px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 8.5pt;
+    line-height: 1.4;
+    overflow-x: auto;
+    white-space: pre-wrap;
+    word-break: break-all;
+    margin-top: 6px;
+    margin-bottom: 12px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    margin-bottom: 14px;
+    font-size: 9pt;
+  }
+
+  th, td {
+    border: 1px solid #cbd5e1;
+    padding: 8px 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f8fafc;
+    color: #0f172a;
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: #f8fafc;
+  }
+
+  .badge {
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 8pt;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #2563eb;
+    border-radius: 4px;
+    margin-right: 5px;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+
+  .note-box {
+    background-color: #eff6ff;
+    border-left: 4px solid #2563eb;
+    padding: 10px 12px;
+    margin-bottom: 12px;
+    font-size: 9.5pt;
+  }
+</style>
+</head>
+<body>
+
+  <h1>AI-Based ERP Security & Intelligence Specification</h1>
+  <p>
+    <span class="badge">Enterprise Grade</span>
+    <span class="badge" style="background-color: #059669;">SOC Blue Team Integration</span>
+    <span class="badge" style="background-color: #7c3aed;">FinOps Fusion</span>
+  </p>
+
+  <div class="note-box">
+    <strong>Document Focus:</strong> Detection Techniques, Overflagging Reduction, Multi-Turn Conversation Security, and Unified Cross-Domain Threat Scoring.
+  </div>
+
+  <h2>1. Executive Summary</h2>
+  <p>Modern Enterprise Resource Planning (ERP) environments process vast volumes of sensitive financial, procurement, and human resource transactions. Traditional rule-based ERP security models suffer from two critical vulnerabilities:</p>
+  <ul>
+    <li><strong>Alert Fatigue &amp; Overflagging:</strong> Up to 85% of standard rule-based alerts represent benign operational spikes (e.g., month-end financial closing).</li>
+    <li><strong>Multi-Turn Conversational Exfiltration:</strong> Adversaries use multi-step natural language interfaces to extract sensitive PII and financial records piecemeal without triggering single-request rule thresholds.</li>
+  </ul>
+  <p>This document details an <strong>AI-Powered ERP Threat Defense Framework</strong> combining 9-tier anomaly detection, dynamic context enrichment, stateful session monitoring, and FinOps cloud cost correlation.</p>
+
+  <h2>2. 9-Tier AI Detection Matrix</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Tier</th>
+        <th>Detection Technique</th>
+        <th>Core Mechanism</th>
+        <th>ERP Operational Context</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Rule-Based</td>
+        <td>Deterministic signature matching</td>
+        <td>Duplicate wire payout requests within 24 hours.</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Threshold Engine</td>
+        <td>Static volumetric limits</td>
+        <td>Wire transfers exceeding a $500,000 baseline cap.</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Statistical Anomaly</td>
+        <td>Z-score variance calculation</td>
+        <td>Identifying a 4.5&sigma; surge in purchase order generation.</td>
+      </tr>
+      <tr>
+        <td>4</td>
+        <td>ML Isolation</td>
+        <td>Unsupervised Isolation Forests</td>
+        <td>Unusual database query structures for a specific user role.</td>
+      </tr>
+      <tr>
+        <td>5</td>
+        <td>UEBA Profiling</td>
+        <td>Rolling behavioral baseline</td>
+        <td>HR access attempt at 3:00 AM from an unrecognized IP range.</td>
+      </tr>
+      <tr>
+        <td>6</td>
+        <td>Sequence Detection</td>
+        <td>Markov chain temporal analysis</td>
+        <td>Sequence: Create Vendor &rarr; Update Bank Info &rarr; Issue Payout.</td>
+      </tr>
+      <tr>
+        <td>7</td>
+        <td>Graph Analytics</td>
+        <td>Network centrality mapping</td>
+        <td>Shared routing details between internal staff &amp; external vendors.</td>
+      </tr>
+      <tr>
+        <td>8</td>
+        <td>Dynamic Risk Scoring</td>
+        <td>Session risk vector aggregation</td>
+        <td>Real-time composite risk tracking across active user sessions.</td>
+      </tr>
+      <tr>
+        <td>9</td>
+        <td>LLM Contextual</td>
+        <td>Transformer-based intent detection</td>
+        <td>Intercepting adversarial prompt injection seeking raw SQL dumps.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="page-break"></div>
+
+  <h2>3. System Architecture</h2>
+  <pre>
+┌────────────────────────────────────────────────────────────────────────┐
+│                        INLINE ACCESS GATEWAY                           │
+│                                                                        │
+│  [User Request] ──► [TLS Terminate] ──► [Anaphora & Entity Resolver]   │
+│                                                   │                    │
+│                                                   ▼                    │
+│                                      [Session Redis State Store]       │
+└───────────────────────────────────────────────────┬────────────────────┘
+                                                    │
+                                                    ▼
+┌────────────────────────────────────────────────────────────────────────┐
+│                    AI DETECTION & RISK ENGINE                          │
+│                                                                        │
+│  ┌──────────────────────────────────────────────────────────────────┐  │
+│  │ 9-Tier Hybrid Detection Array                                    │  │
+│  └────────────────────────────────┬─────────────────────────────────┘  │
+│                                   │                                    │
+│                                   ▼                                    │
+│  ┌──────────────────────────────────────────────────────────────────┐  │
+│  │ Context-Aware False-Positive Suppression Pipeline               │  │
+│  └────────────────────────────────┬─────────────────────────────────┘  │
+│                                   │                                    │
+│                                   ▼                                    │
+│  ┌──────────────────────────────────────────────────────────────────┐  │
+│  │ Unified Risk Engine (R_Unified Computation)                      │  │
+│  └────────────────────────────────┬─────────────────────────────────┘  │
+└───────────────────────────────────┼────────────────────────────────────┘
+                                    │
+               ┌────────────────────┴────────────────────┐
+               ▼                                         ▼
+   [ High Risk: Score >= 75 ]               [ Low Risk: Score < 75 ]
+               │                                         │
+               ▼                                         ▼
+┌──────────────────────────────┐          ┌──────────────────────────────┐
+│ BLUE-TEAM SOAR CONTAINMENT   │          │ ERP TRANSACTION EXECUTION    │
+│ • Terminate OAuth Session    │          │ • Execute ERP Database Action│
+│ • Prompt Step-Up MFA         │          │ • Write Immutable Audit Log  │
+│ • Dispatch SIEM Incident Log │          │ • Update UEBA Baseline Model │
+└──────────────────────────────┘          └──────────────────────────────┘
+  </pre>
+
+  <h2>4. Core Mathematical Formulations</h2>
+  <h3>Statistical Anomaly (Z-Score)</h3>
+  <p>Measures parametric deviation from a rolling historical baseline profile:</p>
+  <pre>Z = (x - μ) / σ</pre>
+
+  <h3>Context-Adjusted Thresholds</h3>
+  <p>Prevents alert floods during known business events by dynamically scaling limits:</p>
+  <pre>T_Adjusted = T_Base * (1 + δ_Calendar) * (1 + δ_Role)</pre>
+
+  <h3>Cross-Domain Unified Risk Aggregation</h3>
+  <p>Integrates security telemetry, application logs, cloud compute loads, and billing metrics:</p>
+  <pre>R_Unified = (w1 * R_Security) + (w2 * R_ERP) + (w3 * R_Cloud) + (w4 * R_FinOps)</pre>
+
+  <h2>5. SOC Automation Playbook Rules</h2>
+  <ul>
+    <li><strong>Low Risk (&lt; 40):</strong> Allow transaction execution, write record to immutable audit storage, update baseline metrics.</li>
+    <li><strong>Medium Risk (40 - 74):</strong> Pause thread, issue FIDO2/TOTP step-up MFA challenge to user device. On verification, resume; on failure, escalate to 85.</li>
+    <li><strong>High Risk (&ge; 75):</strong> Terminate OAuth2 session, revoke active bearer tokens, freeze database transaction execution, write high-priority incident payload to SIEM/SOAR platform.</li>
+  </ul>
+
+</body>
+</html>
