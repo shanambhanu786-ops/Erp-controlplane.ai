@@ -1,3 +1,4 @@
+Intelligent finops based platform
 1.Blue-Team Security + Cloud Cost Optimization + AI Decision Intelligence
 Include team/project name and a modern enterprise-cloud visual.
 2 – Problem Statement
@@ -34,3 +35,11 @@ Contribution Analysis
 Causal Inference
 Business Rules ↓
 LLM Decision Layer
+4.Blue Team Security + FinOps
+Explain defensive techniques:
+IAM least privilege
+Cloud audit-log monitoring
+Cost anomaly detection
+Resource abuse detection
+Security-event/cost correlation
+Automated alerting
